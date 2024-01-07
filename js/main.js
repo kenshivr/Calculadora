@@ -2,6 +2,12 @@ const pantalla = document.querySelector(".pantalla");
 const botones = document.querySelectorAll(".btn");
 var contadorOperaciones = 1;
 
+function guardarOperaciones () {
+    localStorage.setItem(contadorOperaciones, pantalla.textContent);
+
+    contadorOperaciones++;
+};
+
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
         
@@ -23,9 +29,7 @@ botones.forEach(boton => {
 
         if (boton.id === "igual") {
 
-            localStorage.setItem(contadorOperaciones, pantalla.textContent);
-
-            contadorOperaciones++;
+            guardarOperaciones;
 
             try {
                 pantalla.textContent = eval(pantalla.textContent);
