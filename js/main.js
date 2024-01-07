@@ -1,11 +1,21 @@
 const pantalla = document.querySelector(".pantalla");
 const botones = document.querySelectorAll(".btn");
-var contadorOperaciones = 1;
 
-function guardarOperaciones () {
-    localStorage.setItem(contadorOperaciones, pantalla.textContent);
+function guardarOperaciones (operacion) {
 
-    contadorOperaciones++;
+    var longitudLocalStorage = localStorage.length;
+
+    if (longitudLocalStorage > 0) {
+
+        var ultimaKey = localStorage.key(longitudLocalStorage - 1);
+
+        localStorage.setItem(ultimaKey++ , operacion);
+
+    } else {
+
+        localStorage.setItem(0, operacion);
+
+    }
 };
 
 botones.forEach(boton => {
@@ -29,7 +39,7 @@ botones.forEach(boton => {
 
         if (boton.id === "igual") {
 
-            guardarOperaciones;
+            guardarOperaciones(pantalla.textContent);
 
             try {
                 pantalla.textContent = eval(pantalla.textContent);
