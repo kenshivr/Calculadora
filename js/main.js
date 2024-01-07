@@ -5,17 +5,7 @@ function guardarOperaciones (operacion) {
 
     var longitudLocalStorage = localStorage.length;
 
-    if (longitudLocalStorage > 0) {
-
-        var ultimaKey = localStorage.key(longitudLocalStorage - 1);
-
-        localStorage.setItem(ultimaKey++ , operacion);
-
-    } else {
-
-        localStorage.setItem(0, operacion);
-
-    }
+    localStorage.setItem( longitudLocalStorage , operacion);
 };
 
 botones.forEach(boton => {
