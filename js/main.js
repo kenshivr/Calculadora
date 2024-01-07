@@ -1,6 +1,6 @@
 const pantalla = document.querySelector(".pantalla");
 const botones = document.querySelectorAll(".btn");
-const contadorOperaciones = 1;
+var contadorOperaciones = 1;
 
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
