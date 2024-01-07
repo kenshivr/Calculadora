@@ -1,5 +1,6 @@
 const pantalla = document.querySelector(".pantalla");
 const botones = document.querySelectorAll(".btn");
+const contadorOperaciones = 1;
 
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
@@ -21,6 +22,11 @@ botones.forEach(boton => {
         }
 
         if (boton.id === "igual") {
+
+            localStorage.setItem(contadorOperaciones, pantalla.textContent);
+
+            contadorOperaciones++;
+
             try {
                 pantalla.textContent = eval(pantalla.textContent);
             } catch {
