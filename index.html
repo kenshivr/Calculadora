@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Git</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://kit.fontawesome.com/dd49de8bb8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="changeMode">
+        <i class="fa-solid fa-sun iconMode"></i>
+        <i class="fa-solid fa-moon iconMode"></i>
+        <div id="botonMode"></div>
+    </div>
+
+    <div class="calculadora">
+        
+        <div class="pantalla">0</div>
+
+        <button id="c" class="btn gray">C</button>
+        <button id="borrar" class="btn gray">←</button>
+        <button class="btn gray">/</button>
+        <button class="btn orange">*</button>
+        <button class="btn number">7</button>
+        <button class="btn number">8</button>
+        <button class="btn number">9</button>
+        <button class="btn orange">-</button>
+        <button class="btn number">4</button>
+        <button class="btn number">5</button>
+        <button class="btn number">6</button>
+        <button class="btn orange">+</button>
+        <button class="btn number">1</button>
+        <button class="btn number">2</button>
+        <button class="btn number">3</button>
+        <button id="igual" class="btn orange">=</button>
+        <button id="cero" class="btn number">0</button>
+        <button class="btn number">.</button>
+    </div>
+
+    <div class="contentHistorial">
+        <div class="viewHistorial">View Historial</div>
+
+        <div class="saveHistorial">Save Historial</div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>

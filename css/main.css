@@ -1,0 +1,209 @@
+* 
+{
+    --colorNumbers: gray;
+    /* --colorNumbers: #1d1e22; */
+    --colorGray: #575e6ed6;
+    --colorFondo:  #c9ccd5;
+    --colorOrange: #ec8507d3;
+    --colorCalculator: white; 
+    /* --colorCalculator: black;  */
+    --colorPantalla: rgb(54, 50, 50);
+    /* --colorPantalla: white; */
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body 
+{
+    display: flex;
+    padding: 10px;
+    transition: 1s;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorPantalla);
+
+    /* Otra forma de centrar los elementos */
+    /* display: grid;
+    place-items: center; */
+}
+
+#changeMode 
+{
+    top: 10px;
+    left: 10px;
+    width: 70px;
+    height: 40px;
+    border: none;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: var(--colorCalculator);
+}
+
+#changeMode i
+{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    transition: 1s;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorPantalla);
+}
+
+#botonMode
+{
+    left: 45px;
+    /* left: 45px; */
+    width: 30px;
+    height: 30px;
+    transition: 1s;
+    position: fixed;
+    border-radius: 1.5rem;
+    background-color: var(--colorPantalla);
+}
+
+.calculadora
+{
+    gap: .5rem;
+    width: 350px;
+    display: grid;
+    transition: 1s;
+    max-width: 100%;
+    padding: 1.5rem;
+    /* position: relative; */
+    border-radius: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--colorCalculator);
+}
+
+.pantalla
+{
+    height: 10px;
+    display: flex;
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-align: right;
+    align-items: center;
+    margin-bottom: 1rem;
+    grid-column: 1 / -1;
+    border-radius: .5rem;
+    justify-content: right;
+    font-family: monospace;
+    color: var(--colorPantalla);
+}
+
+.btn
+{
+    border: 0;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 1.5rem .5rem;
+    border-radius: 1.5rem;
+    justify-content: center;
+    background-color: #15173c;
+    color: rgb(255, 255, 255);
+}
+
+#igual
+{
+    grid-row: span 2;
+}
+
+#cero
+{
+    grid-column: span 2;
+}
+
+.gray
+{
+    background-color: var(--colorGray);
+}
+
+.orange
+{
+    background-color: var(--colorOrange);
+}
+
+.number
+{
+    background-color: var(--colorNumbers);
+}
+
+.contentHistorial 
+{
+    top: -30px;
+    width: 220px;
+    padding: 10px;
+    height: 430px;
+    margin-left: 10px;
+    position: relative;
+    border-radius: 1.5rem;
+}
+
+.viewHistorial, .saveHistorial
+{
+    width: 50%;
+    height: 20px;
+    display: flex;
+    transition: 1s;
+    font-weight: 600;
+    font-size: xx-small;
+    align-items: center;
+    border-radius: 1.5rem;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.saveHistorial
+{
+    margin-top: 10px;
+}
+
+.estiloHistorial
+{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: none;
+}
+
+.viewHistorial
+{
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+ul
+{
+    list-style: none;
+}
+
+li
+{
+    width: 100%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.iHistorial
+{
+    width: 50%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
