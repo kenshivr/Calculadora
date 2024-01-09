@@ -68,6 +68,13 @@ if (changeButton) {
     console.error("No se encontro el boton con el ID 'changeMode' ");
 }
 
+function guardarOperaciones (operacion) {
+
+    var longitudLocalStorage = localStorage.length;
+
+    localStorage.setItem( longitudLocalStorage , operacion);
+};
+
 botones.forEach(boton => {
     boton.addEventListener("click", () => {
         
@@ -88,6 +95,9 @@ botones.forEach(boton => {
         }
 
         if (boton.id === "igual") {
+
+            guardarOperaciones(pantalla.textContent);
+
             try {
                 pantalla.textContent = eval(pantalla.textContent);
             } catch {
