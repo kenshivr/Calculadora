@@ -72,7 +72,7 @@ function guardarOperaciones (operacion) {
 
     var longitudLocalStorage = localStorage.length;
 
-    localStorage.setItem( longitudLocalStorage , operacion);
+    localStorage.setItem( longitudLocalStorage + 1 , operacion);
 };
 
 botones.forEach(boton => {
