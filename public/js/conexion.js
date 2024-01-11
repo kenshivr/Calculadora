@@ -1,12 +1,13 @@
 let { Pool } = require("pg");
+require('dotenv').config();
 // import { Pool } from "pg";
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'Calculadora',
-  password: '1234',
-  port: 5432
+  user: DB_USER,
+  host: DB_HOST,
+  database: DB_NAME,
+  password: DB_PASSWORD,
+  port: DB_PORT
 });
 
 pool.query('SELECT * FROM "Operaciones"', (error, results) => {
