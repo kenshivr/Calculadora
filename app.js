@@ -6,6 +6,13 @@ const express = require("express");
 // Objetos para llamar los metodos de express
 const app = express();
 
+// Configuraciones
+app.set("view engine", "ejs");
+
+app.get("/", function(req, res){
+    res.render("index.ejs"); 
+});
+
 // // Ruta inicial
 // app.get("/", function(req, res) {
 //     res.send("Hola estudiantes");
