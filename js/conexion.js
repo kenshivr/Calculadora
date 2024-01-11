@@ -1,4 +1,5 @@
-const { Pool } = require('pg');
+let { Pool } = require("pg");
+// import { Pool } from "pg";
 
 const pool = new Pool({
   user: 'postgres',
