@@ -1,13 +1,13 @@
 let { Pool } = require("pg");
-require('dotenv').config();
+const config = require('../../config.js');
 // import { Pool } from "pg";
 
 const pool = new Pool({
-  user: DB_USER,
-  host: DB_HOST,
-  database: DB_NAME,
-  password: DB_PASSWORD,
-  port: DB_PORT
+  user: config.USER,
+  host: config.HOST,
+  database: config.NAME,
+  password: config.PASSWORD,
+  port: config.PORT
 });
 
 pool.query('SELECT * FROM "Operaciones"', (error, results) => {
