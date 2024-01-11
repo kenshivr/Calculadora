@@ -9,6 +9,9 @@ app.get("/", function(req, res) {
     res.send("Hola estudiantes");
 });
 
+// Ruta de archivos estaticos
+app.use(express.static("public"));
+
 // Configurar el puerto usado para el servidor local
 app.listen(3000, function() {
     console.log("El servidor es http://localhost:3000");
